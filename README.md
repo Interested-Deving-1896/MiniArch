@@ -1,43 +1,75 @@
+[update-readmes]   Mode: rewrite — migrating to template structure...
 # MiniArch
-A Minimal `x86_64` Arch Linux Installer
 
-## WARNING
-**Dual booting with existing operating systems IS NOT supported** and existing
-boot entries will more than likely be deleted from your boot partition. However,
-after installing Arch you can use another distros installer to use the boot partition
-created by MiniArch.
+[![Built with Ona](https://ona.com/build-with-ona.svg)](https://app.ona.com/#https://github.com/Interested-Deving-1896/MiniArch)
 
-I hope to add this ability in the future.
+<!-- AI:start:what-it-does -->
+_Description pending._
+<!-- AI:end:what-it-does -->
 
-## How to run
+## Architecture
 
-MiniArch can only operate on empty diskspace, as in, you must first make
-space on your disk with something like `cfdisk` before MiniArch will make
-the disk available to select for installation.
+<!-- AI:start:architecture -->
+_Architecture documentation pending._
+<!-- AI:end:architecture -->
+
+## Install
+
+<!-- Add installation instructions here. This section is yours — the AI will not modify it. -->
 
 ```bash
-# Connect to a network
-#
-#  You can find your Wifi Adapter name
-#  via the `ip address` command, 
-#  probably named "wlan0" or something
-#  close to that 
-#
-wpa_passphrase <Network SSID> <Network Password> | tee /etc/wpa_supplicant.conf
-wpa_supplicant -Bc /etc/wpa_supplicant.conf -i <Wifi Adapter>
-
-curl -L -O https://raw.githubusercontent.com/JustScott/MiniArch/refs/heads/main/install_repo.sh
-
-bash install_repo.sh
+git clone https://github.com/Interested-Deving-1896/MiniArch.git
+cd MiniArch
 ```
 
-## Troubleshooting post installation issues (not related to MiniArch)
+## Usage
 
-### UEFI System unable to find newly created boot partition
-Sometimes motherboard creators only allow booting from partition with the
-label "Windows Boot Partition"
-```bash
-# `-l` as in 'Lima' (some fonts make it hard to differentiate between 
-#   uppercase I and lowercase l)
-sudo efibootmgr -c -L "Windows Boot Manager" -l "\EFI\arch\grubx64.efi"
+<!-- Add usage examples here. This section is yours — the AI will not modify it. -->
+
+## Configuration
+
+<!-- Document configuration options here. This section is yours — the AI will not modify it. -->
+
+## CI
+
+<!-- AI:start:ci -->
+_CI documentation pending._
+<!-- AI:end:ci -->
+
+## Mirror chain
+
+<!-- AI:start:mirror-chain -->
+This repo is maintained in [`Interested-Deving-1896/MiniArch`](https://github.com/Interested-Deving-1896/MiniArch) and mirrored through:
+
 ```
+Interested-Deving-1896/MiniArch  ──►  OpenOS-Project-OSP/MiniArch  ──►  OpenOS-Project-Ecosystem-OOC/MiniArch
+```
+
+Changes flow downstream automatically via the hourly mirror chain in
+[`fork-sync-all`](https://github.com/Interested-Deving-1896/fork-sync-all).
+Direct commits to OSP or OOC are detected and opened as PRs back to `Interested-Deving-1896`.
+<!-- AI:end:mirror-chain -->
+
+## Contributors
+
+<!-- AI:start:contributors -->
+_Contributors pending._
+<!-- AI:end:contributors -->
+
+## Origins
+
+<!-- AI:start:origins -->
+_Original project — no upstream fork._
+<!-- AI:end:origins -->
+
+## Resources
+
+<!-- AI:start:resources -->
+_No additional resource files found._
+<!-- AI:end:resources -->
+
+## License
+
+<!-- AI:start:license -->
+[GPL-3.0](https://github.com/Interested-Deving-1896/MiniArch/blob/main/LICENSE) © 2026 [Interested-Deving-1896](https://github.com/Interested-Deving-1896)
+<!-- AI:end:license -->
